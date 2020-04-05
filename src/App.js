@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+
+import "./App.css";
+
+import Routes from "./Routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+      <Navbar bg="light" collapseOnSelect expand="lg">
+        <Navbar.Brand>
+          <Link to="/">SLS Notes</Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto">
+            <LinkContainer to="/signup">
+              <Nav.Link href="/signup">Signup</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/login">
+              <Nav.Link href="/login">Login</Nav.Link>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <Routes />
+    </Container>
   );
 }
 
