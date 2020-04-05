@@ -5,3 +5,12 @@
 .App .navbar-brand {
   font-weight: bold;
 }
+
+.brand-link {
+  color: gray;
+}
+
+.brand-link:hover {
+  text-decoration: none;
+  color: black;
+}

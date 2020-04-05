@@ -12,7 +12,9 @@ function App() {
     <Container className="App">
       <Navbar bg="light" collapseOnSelect expand="lg">
         <Navbar.Brand>
-          <Link to="/">SLS Notes</Link>
+          <Link className="brand-link" to="/">
+            SLS Notes
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
